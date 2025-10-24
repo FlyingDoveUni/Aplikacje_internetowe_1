@@ -1,0 +1,70 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+
+.my_own_name1{
+    scroll-behavior: auto;
+}
+.spis{
+    scroll-behavior: auto;
+    border-style: solid;
+    border-color: cyan;
+}
+
+
+b {
+    text-align: center;
+    text-size-adjust: auto;
+    color: darkgoldenrod;
+}
+ol {
+    list-style-position: inside;
+    list-style-type: square;
+}
+li {
+    text-size-adjust: inherit;
+    text-align: center;
+    font-family: Arial, cursive;
+}
+
+article {
+    text-align: center;
+    color: indianred;
+    font-family: Comic Sans MS, serif;
+    font-size: small;
+}
+
+h1 {
+    text-align: center;
+    color: blueviolet;
+    text-size-adjust: auto;
+}
+h2 {
+    text-align: center;
+    color: white;
+    text-size-adjust: auto;
+}
+h3 {
+    text-align: center;
+    color: aquamarine;
+    text-size-adjust: auto;
+}
+h4 {
+    text-align: center;
+    color: chartreuse;
+    text-size-adjust: auto;
+}
+
+
+.nag{
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+p{
+    text-align: start;
+}
+

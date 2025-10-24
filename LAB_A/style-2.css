@@ -1,0 +1,62 @@
+body{
+    background-color: lightgoldenrodyellow;
+    color: purple;
+    background-image: url("https://www.freeiconspng.com/thumbs/sun/natural-energy-source-the-sun-transparent-photos-3.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    border-radius: 50%;
+
+
+}
+h1{
+    font-family: Complex, cursive;
+}
+h2{
+    text-align: center;
+    font-family: "Bell MT", fantasy;
+}
+
+h3{
+
+    flex-direction: column;
+    scroll-behavior: auto;
+}
+a{
+    font-family: Bakery, ui-serif;
+}
+
+
+
+article{
+    font-family: ItalicC, fantasy;
+}
+
+
+.nag{
+
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.my_own_name1{
+
+    flex-direction: column;
+    scroll-behavior: auto;
+}
+.spis{
+    scroll-behavior: auto;
+    text-space: inherit;
+}
+.lain{
+    display: none;
+}
+
+.feet{
+    scroll-behavior: auto;
+
+    border-style: double;
+    border-color: maroon;
+}
+

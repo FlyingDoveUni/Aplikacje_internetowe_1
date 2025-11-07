@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>lista todo</title>
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<div class="kontener">
+    <h1>lista zadań</h1>
+
+    <!-- wyszukiwarka -->
+    <input type="text" id="wyszukiwarka" class="top-input" placeholder="wyszukaj...">
+
+    <!-- lista -->
+    <div class="scroll-list" style="max-height:50vh; overflow-y:auto;">
+        <ul id="element_lista"></ul>
+    </div>
+
+    <!-- dodawanie -->
+    <form id="formulaz" class="bottom-input">
+        <input type="text" id="tresc_zadanie" placeholder="dodaj zadanie..." required>
+        <input type="date" id="data_zadanie">
+        <button type="submit" id="przycisk_zadanie">Dodaj</button>
+    </form>
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>

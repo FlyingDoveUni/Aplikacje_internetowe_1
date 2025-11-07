@@ -1,0 +1,153 @@
+/* --- reset (bardzo lekki) --- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+/*wiekszosc rzeczy w tym css jest z chata */
+/* --- bazowe kolory/typografia --- */
+:root{
+    --bg: #f6f7f8;
+    --panel: #ffffff;
+    --text: #1b1f23;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #2563eb;
+    --danger: #ef4444;
+}
+
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: black;
+    padding: 24px;
+    line-height: 1.5;
+}
+
+
+.kontener{
+    max-width: 720px;
+    margin: 0 auto;
+    background: gray;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+
+.kontener h1{
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+}
+
+
+.top-input{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+.top-input::placeholder{ color: var(--muted); }
+
+
+.scroll-list{
+    overflow-y: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: lightpink;
+    padding: 4px;
+}
+
+/* --- lista --- */
+ul{ list-style: none; margin: 0; padding: 0; }
+
+/* pojedynczy wiersz zadania */
+.element_todo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--line);
+}
+.element_todo:last-child{ border-bottom: none; }
+
+.todo_main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    flex: 1;
+}
+
+.element_text{ word-break: break-word; }
+.element_data{ color: var(--muted); font-size: 0.9rem; }
+
+
+button{
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover{ filter: brightness(0.98); }
+
+.btn-small{ padding: 6px 10px; font-size: 0.9rem; }
+.btn-danger{ background: var(--danger); border-color: var(--danger); }
+
+/* --- formularz dodawania --- */
+.bottom-input{
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    gap: 8px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.bottom-input input[type="text"],
+.bottom-input input[type="date"]{
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: var(--text);
+}
+.bottom-input input::placeholder{ color: var(--muted); }
+
+/* --- podświetlenie wyszukiwania --- */
+.highlight{
+    background: yellow;
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+/* --- tryb edycji w wierszu --- */
+.editing{ background: pink; border-radius: 8px; }
+.inline-editor{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+.inline-editor .edit-text,
+.inline-editor .edit-date{
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    outline: none;
+    background: #fff;
+    color: var(--text);
+}
+
+/* --- drobna responsywność z chata --- */
+@media (max-width: 520px){
+    .bottom-input{
+        grid-template-columns: 1fr;
+    }
+    .scroll-list{ max-height: 60vh; }
+}

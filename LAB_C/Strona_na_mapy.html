@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps with Leaflet</title>
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+
+
+    <style>
+
+        #map {
+            width: 512px;
+            height: 512px;
+            border: 1px solid black;
+        }
+
+        #rasterMap {
+            width: 512px;
+            height: 512px;
+            border: 1px solid black;
+        }
+        div.drag-target {
+            width: 128px;
+            height: 128px;
+            border: 2px dashed red;
+
+        }
+        #targetContainer{
+            background: black;
+            display: grid;
+            width:512px;
+            height:512px;
+            grid-template-columns: repeat(4,1fr) ;
+        }
+        #deadLand{
+            background: blue;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<div id="allElements"></div>
+    <div></div>
+        <div></div>
+
+<button id="getLocation">Get Current Location</button>
+<button id="saveButton">Save Raster Map</button>
+<button id="start">Start puzzle</button>
+
+<br>
+<canvas id="singleCanvasX" width="128" height="128" class="item draggable" draggable="true" hidden></canvas>
+
+
+
+<canvas id="rasterMap" width="512" height="512"></canvas>
+<br>
+<br>
+
+<div class="grids">
+<div id="targetContainer">
+<div class="drag-target" id="canvasx" hidden ></div>
+
+</div>
+<div id="puzzle"></div>
+
+
+</div>
+<div class="drag-target" id="deadLand"  ></div>
+
+<script src="mapy.js"></script>
+
+
+</body>
+</html>

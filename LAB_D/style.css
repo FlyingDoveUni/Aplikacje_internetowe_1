@@ -1,0 +1,162 @@
+/* Reset podstawowy */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: lightpink;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* ----------------------------------------- */
+/* SEARCHBAR + pierwszy wynik                */
+/* ----------------------------------------- */
+
+#top-panel {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Panel wyszukiwania */
+#weather-search-params {
+    background: purple;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#weather-search-params h1 {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    white-space: nowrap;
+}
+
+#locationInput {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    min-width: 220px;
+    outline: none;
+}
+
+#checkButton {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    background: brown;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#checkButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* PIERWSZY WYNIK – wyśrodkowany pod searchbarem */
+#current-weather {
+    width: 100%;
+    max-width: 320px; /* żeby wyglądało jak na screenie */
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------------------------- */
+/* RESZTA WYNIKÓW – układ od LEWEJ           */
+/* ----------------------------------------- */
+
+#weather-results-container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start; /* UKŁAD OD LEWEJ */
+}
+
+/* ----------------------------------------- */
+/* KARTY POGODY                              */
+/* ----------------------------------------- */
+
+.weather-block {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 10px 12px;
+
+    /* ważne: dla reszty kafelków */
+    flex: 1 1 180px;
+    max-width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.weather-date {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.weather-temperature {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.weather-temperature-feels-like {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.weather-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 4px;
+}
+
+.weather-description {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+/* ----------------------------------------- */
+/* RESPONSYWNOŚĆ                             */
+/* ----------------------------------------- */
+
+@media (max-width: 600px) {
+    #weather-search-params {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #locationInput,
+    #checkButton {
+        width: 100%;
+    }
+
+    #weather-results-container {
+        justify-content: center;
+    }
+}
